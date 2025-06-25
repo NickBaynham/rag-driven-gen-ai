@@ -1,0 +1,19 @@
+[project]
+name = "rag-driven-gen-ai"
+version = "0.1.0"
+description = "RAG-driven Generative AI Pipelines (training)"
+authors = [
+    {name = "Nick Baynham", email = "nickbaynham@gmail.com"},
+]
+dependencies = ["beautifulsoup4>=4.13.4", "requests>=2.32.4", "boto3>=1.38.44", "urllib3>=2.5.0", "deeplake>=4.2.10", "openai>=1.91.0"]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
