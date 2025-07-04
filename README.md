@@ -12,6 +12,7 @@ A Python application that implements Retrieval-Augmented Generation (RAG) pipeli
 ## Prerequisites
 
 - Python 3.8 or higher
+- Make, to build the project
 - AWS CLI configured with appropriate credentials
 - OpenAI API key stored in AWS Secrets Manager
 
@@ -23,21 +24,17 @@ A Python application that implements Retrieval-Augmented Generation (RAG) pipeli
    cd rag-driven-gen-ai
    ```
 
-2. **Set up Python environment**
+2. **Build the Project with Make**
    ```bash
-   # Create virtual environment
-   python -m venv .venv
-   
-   # Activate virtual environment
-   # On macOS/Linux:
-   source .venv/bin/activate
-   # On Windows:
-   .venv\Scripts\activate
-   ```
+   # if you don't have Make, install with:
+   brew install make
 
-3. **Install dependencies**
+   # Run the build
+   Make all
+
+3. **Adding dependencies**
    ```bash
-   pip install boto3 urllib3 openai requests beautifulsoup4
+   pdm add <package_name>
    ```
 
 ## Configuration
@@ -75,7 +72,7 @@ The application automatically retrieves the OpenAI API key from AWS Secrets Mana
 
 2. **Run the main script**
    ```bash
-   python src/main.py
+   pdm run src/main.py
    ```
 
 ### What the Application Does
