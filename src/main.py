@@ -6,6 +6,16 @@ import requests
 from bs4 import BeautifulSoup
 import re
 
+# The Weaviate API key is stored in AWS Secrets Manager
+# This function retrieves the key from AWS Secrets Manager
+# and returns it as a string
+def get_weaviate_key():
+    # Create a session with SSL verification disabled
+    session = boto3.Session()
+    client = session.client('secretsmanager', verify=False)
+    response = client.get_secret_value(SecretId='weaviate/apiKey')
+    return response['SecretString']
+
 # The OpenAI API key is stored in AWS Secrets Manager
 # This function retrieves the key from AWS Secrets Manager
 # and returns it as a string

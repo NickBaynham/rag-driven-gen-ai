@@ -5,7 +5,7 @@ description = "RAG-driven Generative AI Pipelines (training)"
 authors = [
     {name = "Nick Baynham", email = "nickbaynham@gmail.com"},
 ]
-dependencies = ["beautifulsoup4>=4.13.4", "requests>=2.32.4", "boto3>=1.38.45", "urllib3>=2.5.0", "openai>=1.92.2", "weaviate-client>=4.15.4"]
+dependencies = ["beautifulsoup4>=4.13.4", "requests>=2.32.4", "boto3>=1.38.45", "urllib3>=2.5.0", "openai>=1.92.2", "weaviate-client>=4.15.4", "python-dotenv>=1.1.1"]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
